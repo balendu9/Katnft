@@ -80,20 +80,20 @@ export default function Home() {
             </p>
           )}
           <div className="flex flex-row items-center justify-center my-4">
-            <button
+            {/* <button
               className="bg-black text-white px-4 py-2 rounded-md mr-4"
               onClick={() => setQuantity(Math.max(1, quantity - 1))}
-            >-</button>
+            >-</button> */}
             <input 
               type="number" 
               value={quantity}
               onChange={(e) => setQuantity(parseInt(e.target.value))}
-              className="w-10 text-center border border-gray-300 rounded-md bg-black text-white"
+              className="w-10 text-center hidden border border-gray-300 rounded-md bg-black text-white"
             />
-            <button
+            {/* <button
               className="bg-black text-white px-4 py-2 rounded-md mr-4"
               onClick={() => setQuantity(quantity + 1)}
-            >+</button>
+            >+</button> */}
           </div>
           <TransactionButton
             transaction={() => claimTo({
@@ -117,17 +117,10 @@ export default function Home() {
 function Header() {
   return (
     <header className="flex flex-row items-center">
-      <Image
-        src={thirdwebIcon}
-        alt=""
-        className="size-[150px] md:size-[150px]"
-        style={{
-          filter: "drop-shadow(0px 0px 24px #a726a9a8)",
-        }}
-      />
+      
 
       <h1 className="text-2xl md:text-6xl font-semibold md:font-bold tracking-tighter mb-6 text-zinc-100">
-        NFT Claim App
+        Claim your KAT NFT here
       </h1>
     </header>
   );
